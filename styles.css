@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #ff0000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  flex: 2;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border: 2px solid #ff4444;
+}
+
+.filter-select {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+.filter-select:hover {
+  background-color: #e0e0e0;
+}
+
+.job-listings {
+  margin-bottom: 20px;
+}
+
+.job-card {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.job-title {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.job-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.location {
+  color: #ff0000;
+  font-weight: 500;
+}
+
+.salary,
+.experience,
+.job-status {
+  background-color: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.salary:hover,
+.experience:hover,
+.job-status:hover {
+  background-color: #e0e0e0;
+}
+
+.apply-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4444;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #ff6666;
+  transform: scale(1.05);
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-btn,
+.page-number {
+  padding: 8px 15px;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:disabled,
+.page-number:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  border-color: #e0e0e0;
+  color: #999;
+}
+
+.nav-btn:hover:not(:disabled),
+.page-number:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  border-color: #ff4444;
+}
+
+.page-number.active {
+  background-color: #ff0000;
+  color: #fff;
+  border-color: #ff0000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: #ff0000;
+}
+
+.modal h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #666;
+}
+
+.modal input,
+.modal button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal button {
+  background-color: #ff4444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #ff6666;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select {
+    width: 100%;
+  }
+
+  .job-details {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .modal-content {
+    margin: 20% auto;
+    width: 90%;
+  }
+}
